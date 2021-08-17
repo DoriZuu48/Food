@@ -1,3 +1,5 @@
+"use strict";
+
 window.addEventListener('DOMContentLoaded', () => {
 
 
@@ -125,7 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	//Modal 
 
 	const modalTrigger = document.querySelectorAll('[data-modal]'),
-		modal = document.querySelector('.modal')
+		modal = document.querySelector('.modal');
 
 	function openModal() {
 		modal.classList.add('show');
@@ -199,15 +201,15 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 
 			element.innerHTML = `
-                <img src=${this.src} alt=${this.alt}>
-                <h3 class="menu__item-subtitle">${this.title}</h3>
-                <div class="menu__item-descr">${this.descr}</div>
-                <div class="menu__item-divider"></div>
-                <div class="menu__item-price">
-                    <div class="menu__item-cost">Цена:</div>
-                    <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
-                </div>
-            `;
+								<img src=${this.src} alt=${this.alt}>
+								<h3 class="menu__item-subtitle">${this.title}</h3>
+								<div class="menu__item-descr">${this.descr}</div>
+								<div class="menu__item-divider"></div>
+								<div class="menu__item-price">
+										<div class="menu__item-cost">Цена:</div>
+										<div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+								</div>
+						`;
 			this.parent.append(element);
 		}
 	}
@@ -316,5 +318,4 @@ window.addEventListener('DOMContentLoaded', () => {
 			closeModal();
 		}, 4000);
 	}
-
 });
